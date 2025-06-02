@@ -1,4 +1,5 @@
 /* Reseteo básico */
+/* Elimina márgenes y rellenos predeterminados del navegador y configura el modelo de caja para que el padding y borde no aumenten el tamaño total del elemento */
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +7,7 @@
 }
 
 /* Estilos generales */
+/* Estilos básicos para el cuerpo del documento: fuente, interlineado, color de texto y fondo */
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
@@ -13,6 +15,7 @@ body {
     background-color: #f8f8f8;
 }
 
+/* Contenedor principal con ancho limitado y centrado */
 .container {
     width: 90%;
     max-width: 1100px;
@@ -20,28 +23,34 @@ body {
     padding: 20px;
 }
 
+/* Margen inferior y color personalizado para títulos */
 h1, h2, h3 {
     margin-bottom: 15px;
     color: #2c3e50;
 }
 
+/* Quita el subrayado por defecto de los enlaces */
 a {
     text-decoration: none;
 }
 
+/* Hace que las imágenes no sobrepasen el ancho del contenedor */
 img {
     max-width: 100%;
 }
 
+/* Aplica espaciado vertical a cada sección */
 section {
     padding: 40px 0;
 }
 
+/* Estilo alternativo para secciones con fondo gris claro */
 .section-alt {
     background-color: #eaeaea;
 }
 
 /* Encabezado */
+/* Estilo del encabezado principal: fondo oscuro, texto blanco, centrado y con padding */
 header {
     background-color: #2c3e50;
     color: white;
@@ -49,6 +58,7 @@ header {
     padding: 30px 0;
 }
 
+/* Imagen de perfil redonda, con borde blanco y separación inferior */
 .profile-image {
     width: 150px;
     height: 150px;
@@ -58,10 +68,12 @@ header {
 }
 
 /* Navegación */
+/* Fondo del nav */
 nav {
     background-color: #34495e;
 }
 
+/* Lista del menú horizontal y centrada */
 nav ul {
     list-style: none;
     display: flex;
@@ -69,21 +81,25 @@ nav ul {
     flex-wrap: wrap;
 }
 
+/* Separación entre ítems del menú */
 nav ul li {
     margin: 0 10px;
 }
 
+/* Estilos de enlaces del menú */
 nav ul li a {
     color: white;
     display: block;
     padding: 15px 10px;
 }
 
+/* Cambio de color al pasar el mouse */
 nav ul li a:hover {
     color: #3498db;
 }
 
 /* Títulos de secciones */
+/* Títulos <h2> centrados con subrayado decorativo */
 h2 {
     text-align: center;
     font-size: 1.8rem;
@@ -93,18 +109,21 @@ h2 {
     display: inline-block;
 }
 
+/* Ajuste adicional cuando <h2> está dentro de una sección */
 section h2 {
     display: table;
     margin: 0 auto 30px;
 }
 
 /* Hobbies */
+/* Muestra los hobbies en grilla responsive */
 .hobbies-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
 
+/* Tarjeta individual de hobby con sombra y bordes */
 .hobby-item {
     background-color: white;
     border-radius: 5px;
@@ -112,17 +131,20 @@ section h2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Imagen del hobby con tamaño fijo y recorte */
 .hobby-item img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
+/* Texto del hobby con padding interno */
 .hobby-item h3, 
 .hobby-item p {
     padding: 0 15px;
 }
 
+/* Separación arriba del título y abajo del párrafo */
 .hobby-item h3 {
     margin-top: 15px;
 }
@@ -132,12 +154,14 @@ section h2 {
 }
 
 /* Educación y Experiencia */
+/* Contenedor de listas centrado */
 .education-list,
 .experience-list {
     max-width: 800px;
     margin: 0 auto;
 }
 
+/* Tarjetas individuales con sombra y padding */
 .education-item,
 .experience-item {
     background-color: white;
@@ -147,6 +171,7 @@ section h2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilo para fechas de experiencia/educación */
 .date {
     color: #7f8c8d;
     font-weight: bold;
@@ -154,12 +179,14 @@ section h2 {
 }
 
 /* Portafolio */
+/* Grilla de tarjetas de proyectos */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
 }
 
+/* Tarjeta individual del portafolio con sombra, bordes y padding */
 .portfolio-item {
     background-color: white;
     border-radius: 5px;
@@ -168,22 +195,27 @@ section h2 {
     padding-bottom: 15px;
 }
 
+/* Imagen del proyecto con tamaño fijo y recorte */
 .portfolio-item img {
     width: 100%;
     height: 180px;
     object-fit: cover;
 }
 
+/* Texto del proyecto con padding interno */
 .portfolio-item h3, 
 .portfolio-item p {
     padding: 0 15px;
     margin-bottom: 10px;
 }
 
+/* Separación arriba del título */
 .portfolio-item h3 {
     margin-top: 15px;
 }
 
+/* Botón de enlace al proyecto */
+/* Botón con color azul y borde redondeado */
 .btn {
     display: inline-block;
     background-color: #3498db;
@@ -193,11 +225,13 @@ section h2 {
     margin-left: 15px;
 }
 
+/* Cambio de color al pasar el mouse sobre el botón */
 .btn:hover {
     background-color: #2980b9;
 }
 
 /* Pie de página */
+/* Fondo oscuro, texto blanco y centrado */
 footer {
     background-color: #2c3e50;
     color: white;
@@ -205,22 +239,26 @@ footer {
     padding: 20px 0;
 }
 
+/* Separación para los iconos sociales */
 .social-links {
     margin-bottom: 15px;
 }
 
+/* Estilo de los enlaces sociales: color blanco, margen y tamaño de fuente */
 .social-links a {
     color: white;
     margin: 0 10px;
     font-size: 1.1rem;
 }
 
+/* Subrayado al pasar el mouse */
 .social-links a:hover {
     text-decoration: underline;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+    /* Menú en columna en pantallas pequeñas */
     nav ul {
         flex-direction: column;
         text-align: center;
@@ -234,6 +272,7 @@ footer {
         padding: 10px;
     }
     
+     /* Grillas de hobbies y portafolio en una sola columna */
     .hobbies-grid,
     .portfolio-grid {
         grid-template-columns: 1fr;
