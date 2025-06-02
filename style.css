@@ -240,20 +240,21 @@ footer {
 }
 
 /* Separación para los iconos sociales */
-.social-links {
+.redes-sociales {
     margin-bottom: 15px;
 }
 
-/* Estilo de los enlaces sociales: color blanco, margen y tamaño de fuente */
-.social-links a {
+/* Iconos de redes sociales*/
+.redes-sociales a {
     color: white;
     margin: 0 10px;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    transition: color 0.3s ease; 
 }
 
 /* Subrayado al pasar el mouse */
-.social-links a:hover {
-    text-decoration: underline;
+.redes-sociales a:hover {
+    color: #3498db;
 }
 
 /* Responsive */
