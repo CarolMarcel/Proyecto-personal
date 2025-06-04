@@ -1,0 +1,122 @@
+/* Aplica el estilo a toda la pagina */
+/* Fuente del texto (Arial como principal, sans-serif como respaldo), Elimina espacios por defecto del navegador */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el contenedor principal */
+/* Ancho del 80% de la pantalla, centrado horizontalmente, con un poco de espacio arriba y abajo */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Estilo para el encabezado */
+/* Fondo oscuro, con texto blanco, texto centrado, mucho espacio arriba y abajo para darle presencia visual */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+/* Estilo para el encabezado h1 */
+/* Agranda el título principal (h1) dentro del header */
+header h1 {
+    font-size: 2.5em;
+}
+
+/* Crea un botón azul con texto blanco, inline-block: Se comporta como texto, pero puede tener padding y margin, Bordes redondeados, Hace una animación suave al pasar el mouse */
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Cambia el color del botón al pasar el mouse */
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Cada sección tiene espacio vertical (50px arriba y abajo), Los títulos h2 están centrados */ 
+section {
+    padding: 50px 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* .feature centra el contenido y separa las cajas verticalmente, Agranda los subtítulos (h3) */
+.feature {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.feature h3 {
+    font-size: 1.5em;
+}
+
+/* Fondo claro con caja redondeada, Espacio interno y separación entre testimonios */ 
+.testimonial {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+/* El texto se ve como cita (italic) y el nombre del cliente va en negrita */
+.testimonial p {
+    font-style: italic;
+}
+
+.testimonial cite {
+    font-weight: bold;
+}
+
+/* El formulario no se extiende más de 600px, centrado horizontalmente */ 
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Todos los campos ocupan el 100% del ancho del formulario, Tienen espacio interno, separación entre ellos, bordes suaves y un borde gris claro */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* El botón de envío tiene un fondo azul, texto blanco, sin borde, con espacio interno, bordes redondeados, cursor de mano y una animación suave al pasar el mouse */
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Mismo estilo que el header: fondo oscuro, texto blanco, centrado, con espacio arriba y abajo. */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
