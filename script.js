@@ -1,0 +1,66 @@
+// --- Formulario con Validaciones ---
+document.addEventListener("DOMContentLoaded", function () {
+    const formulario = document.getElementById("formularioContacto");
+    const estado = document.getElementById("estadoEnvio");
+
+    if (formulario) {
+        formulario.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const nombre = document.getElementById("nombre").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const edad = parseInt(document.getElementById("edad").value);
+            const mensaje = document.getElementById("mensaje").value.trim();
+            const terminos = document.getElementById("terminos").checked;
+
+            if (nombre.length < 3) {
+                estado.textContent = "El nombre debe tener al menos 3 caracteres.";
+                estado.style.color = "red";
+                return;
+            }
+
+            if (!email.includes("@") || !email.includes(".")) {
+                estado.textContent = "El correo electrónico no es válido.";
+                estado.style.color = "red";
+                return;
+            }
+
+            if (isNaN(edad) || edad < 18 || edad > 99) {
+                estado.textContent = "La edad debe estar entre 18 y 99 años.";
+                estado.style.color = "red";
+                return;
+            }
+
+            if (mensaje.length < 10) {
+                estado.textContent = "El mensaje debe tener al menos 10 caracteres.";
+                estado.style.color = "red";
+                return;
+            }
+
+            if (!terminos) {
+                estado.textContent = "Debes aceptar los términos.";
+                estado.style.color = "red";
+                return;
+            }
+
+            estado.textContent = "Formulario enviado correctamente.";
+            estado.style.color = "green";
+        });
+    }
+});
+
+// --- Carrito de Servicios ---
+let servicios = [];
+let total = 0;
+
+function agregarServicio(nombre, precio) {
+    servicios.push({ nombre, precio });
+    total += precio;
+
+    const lista = document.getElementById("listaServicios");
+    const item = document.createElement("li");
+    item.textContent = `${nombre} - $${precio.toLocaleString('es-CL')}`;
+    lista.appendChild(item);
+
+    document.getElementById("totalServicios").textContent = total.toLocaleString('es-CL');
+}
