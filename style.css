@@ -279,3 +279,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+#servicios .btn {
+    margin: 5px;
+}
