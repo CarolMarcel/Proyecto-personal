@@ -9,6 +9,15 @@
     <script src="script.js"></script>
 </head>
 <body>
+    <!-- Carrito flotante -->
+    <div id="carrito-container">
+        <i class="fas fa-shopping-cart" id="icono-carrito"></i>
+        <div id="menu-carrito" class="oculto">
+            <h4>Servicios Seleccionados:</h4>
+            <ul id="listaServicios"></ul>
+            <p><strong>Total:</strong> $<span id="totalServicios">0</span> CLP</p>
+        </div>
+    </div>
     <!-- Encabezado -->
     <header>
         <div class="container">
@@ -152,6 +161,20 @@
                         <p>Panel de administración con estadísticas y gestión de usuarios.</p>
                         <a href="#" class="btn">Ver Proyecto</a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nueva Sección de Servicios -->
+        <section id="servicios" class="section-alt">
+            <div class="container">
+                <h2>Servicios Disponibles</h2>
+                <p>Selecciona los servicios que te interesan para armar una cotización estimada:</p>
+                <div class="servicios-disponibles">
+                    <button class="btn" onclick="agregarServicio('Diseño Web', 850000)">Diseño Web</button>
+                    <button class="btn" onclick="agregarServicio('Instalación de Sistemas', 500000)">Instalación de Sistemas</button>
+                    <button class="btn" onclick="agregarServicio('Migración a la Nube', 30000000)">Migración a la Nube</button>
+                    <button class="btn" onclick="agregarServicio('Asesoría Técnica', 800000)">Asesoría Técnica</button>
                 </div>
             </div>
         </section>
