@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (icono && menu) {
         icono.addEventListener("click", () => {
-            menu.style.display = menu.style.display === "block" ? "none" : "block";
+            menu.classList.toggle("oculto");
         });
     }
 });
@@ -64,13 +64,30 @@ let servicios = [];
 let total = 0;
 
 function agregarServicio(nombre, precio) {
-    servicios.push({ nombre, precio });
-    total += precio;
+            servicios.push({ nombre, precio });
+            total += precio;
 
-    const lista = document.getElementById("listaServicios");
-    const item = document.createElement("li");
-    item.textContent = `${nombre} - $${precio.toLocaleString('es-CL')}`;
-    lista.appendChild(item);
+            const lista = document.getElementById("listaServicios");
+            const item = document.createElement("li");
+            const index = servicios.length - 1;
+            item.innerHTML = `${nombre} - $${precio.toLocaleString('es-CL')} <button onclick="eliminarServicio(${index})" style="margin-left: 10px; color: red; background: none; border: none; cursor: pointer;">&times;</button>`;
+            lista.appendChild(item);
 
-    document.getElementById("totalServicios").textContent = total.toLocaleString('es-CL');
-}
+            document.getElementById("totalServicios").textContent = total.toLocaleString('es-CL');
+        }
+
+        function eliminarServicio(index) {
+            total -= servicios[index].precio;
+            servicios.splice(index, 1);
+
+            const lista = document.getElementById("listaServicios");
+            lista.innerHTML = "";
+            servicios.forEach((servicio, i) => {
+                const item = document.createElement("li");
+                item.innerHTML = `${servicio.nombre} - $${servicio.precio.toLocaleString('es-CL')} <button onclick="eliminarServicio(${i})" style="margin-left: 10px; color: red; background: none; border: none; cursor: pointer;">&times;</button>`;
+                lista.appendChild(item);
+            });
+
+            document.getElementById("totalServicios").textContent = total.toLocaleString('es-CL');
+        }
+
