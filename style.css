@@ -280,6 +280,45 @@ footer {
     }
 }
 
-#servicios .btn {
-    margin: 5px;
+#carrito-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#icono-carrito {
+    font-size: 1.8rem;
+    color: #fff;
+    background-color: #3498db;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+#menu-carrito {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 250px;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    display: none;
+}
+
+#menu-carrito ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+#menu-carrito li {
+    margin-bottom: 5px;
+}
+
+.oculto {
+    display: none;
 }
