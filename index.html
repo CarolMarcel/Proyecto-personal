@@ -9,7 +9,13 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <!-- Carrito flotante -->
+    <!-- Carrito flotante con redirección -->
+    <div id="carrito-container">
+        <a href="#formularioContacto" title="Ir al formulario">
+            <i class="fas fa-shopping-cart" id="icono-carrito"></i>
+        </a>
+    </div>
+    <!-- Carrito flotante 
     <div id="carrito-container">
         <i class="fas fa-shopping-cart" id="icono-carrito"></i>
         <div id="menu-carrito" class="oculto">
@@ -22,13 +28,13 @@
             <ul id="listaServicios"></ul>
             <p><strong>Total:</strong> $<span id="totalServicios">0</span> CLP</p>
         </div>
-    </div>
+    </div>  -->
     <!-- Encabezado -->
     <header>
         <div class="container">
             <img src="https://raw.githubusercontent.com/CarolMarcel/Proyecto-personal/main/Foto_perfil.jpg" alt="Mi Foto de Perfil" class="profile-image">
             <h1>Carol Marcel</h1>
-            <p>Analista Programador | Desarrollador Front-End</p>
+            <p>Analista Programador | Desarrollador Full Stack</p>
         </div>
     </header>
     
@@ -149,6 +155,33 @@
                         <a href="#" class="btn">Ver Proyecto</a>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Formulario de contacto simulado -->
+        <section id="formularioContacto" class="section-alt">
+            <div class="container">
+                <h2>Formulario de Contacto</h2>
+                <form id="formularioContacto">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" required min="18" max="99">
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" required minlength="10"></textarea>
+
+                    <label>
+                        <input type="checkbox" id="terminos" required> Acepto los términos y condiciones
+                    </label>
+
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+                <p id="estadoEnvio"></p>
             </div>
         </section>
 
