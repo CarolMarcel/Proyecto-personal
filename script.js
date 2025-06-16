@@ -47,6 +47,16 @@ document.addEventListener("DOMContentLoaded", function () {
             estado.style.color = "green";
         });
     }
+
+    // --- Mostrar/Ocultar Carrito ---
+    const icono = document.getElementById("icono-carrito");
+    const menu = document.getElementById("menu-carrito");
+
+    if (icono && menu) {
+        icono.addEventListener("click", () => {
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        });
+    }
 });
 
 // --- Carrito de Servicios ---
