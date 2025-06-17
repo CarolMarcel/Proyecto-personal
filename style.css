@@ -367,4 +367,16 @@ html {
     scroll-behavior: smooth;
 }
 
+#listaServicios button {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 1rem;
+    cursor: pointer;
+    padding-left: 8px;
+}
+
+#listaServicios button:hover {
+    color: darkred;
+}
 
