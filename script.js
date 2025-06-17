@@ -1,5 +1,6 @@
-// --- Formulario con Validaciones ---
-document.addEventListener("DOMContentLoaded", function () {
+// --- Formulario con Validaciones y carrito independiente ---
+document.addEventListener("DOMContentLoaded", () => {
+    // Validaciones del formulario de contacto ---
     const formulario = document.getElementById("formularioContacto");
     const estado = document.getElementById("estadoEnvio");
 
@@ -48,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // --- Mostrar/Ocultar Carrito ---
+    // --- Carrito desplegable ---
     const icono = document.getElementById("icono-carrito");
     const menu = document.getElementById("menu-carrito");
 
@@ -59,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// --- Carrito de Servicios ---
+// --- Funcionalidad del carrito ---
 let servicios = [];
 let total = 0;
 
