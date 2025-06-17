@@ -320,7 +320,7 @@ footer {
 
 #menu-carrito .btn {
     display: block;
-    width: 100%;
+    width: 50%;
     margin-bottom: 8px;
     background-color: #3498db;
     color: white;
@@ -355,3 +355,16 @@ footer {
 .oculto {
     display: none;
 }
+
+/* Resaltado temporal al ir al formulario */
+.resaltado {
+    box-shadow: 0 0 15px 5px #3498db;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+
