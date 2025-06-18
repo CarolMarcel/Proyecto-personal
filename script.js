@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 estado.style.color = "red";
                 return;
             }
-            if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) {
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
                 estado.textContent = "El correo electrónico debe incluir '@' y al menos un punto después.";
                 estado.style.color = "red";
                 return;
