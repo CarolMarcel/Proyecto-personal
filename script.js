@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const menu = document.getElementById("menu-carrito");
 
     if (carritoIcono && menuCarrito) {
-    carritoIcono.addEventListener("click", () => {
+        carritoIcono.addEventListener("click", () => {
         menuCarrito.classList.toggle("activo");
     });
 }
