@@ -294,15 +294,33 @@ footer {
     z-index: 1000;
 }
 
+.carrito-lateral {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 320px;
+    background-color: white;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    overflow-y: auto;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+    z-index: 1001;
+}
+
+.carrito-lateral.activo {
+    transform: translateX(0%);
+}
+
 #icono-carrito {
+    position: relative;
     font-size: 1.8rem;
-    color: #fff;
     background-color: #3498db;
     padding: 10px;
+    color: white;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    position: relative;
 }
 
 #contador-carrito {
@@ -377,9 +395,7 @@ footer {
     font-size: 0.9rem;
 }
 
-.oculto {
-    display: none;
-}
+
 
 /* Resaltado temporal al ir al formulario */
 .resaltado {
