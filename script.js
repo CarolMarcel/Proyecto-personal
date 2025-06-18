@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 estado.style.color = "red";
                 return;
             }
-            if (!email.includes("@") || !email.includes(".")) {
-                estado.textContent = "El correo electrónico no es válido.";
+            if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) {
+                estado.textContent = "El correo electrónico debe incluir '@' y al menos un punto después.";
                 estado.style.color = "red";
                 return;
             }
@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
+            formulario.reset();
             estado.textContent = "Formulario enviado correctamente.";
             estado.style.color = "green";
         });
