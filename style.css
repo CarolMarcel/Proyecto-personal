@@ -313,6 +313,10 @@ footer {
     transform: translateX(0%);
 }
 
+.oculto {
+  display: block; /* permite que el menú se mantenga oculto solo con transform */
+}
+
 #icono-carrito {
     position: relative;
     font-size: 1.8rem;
