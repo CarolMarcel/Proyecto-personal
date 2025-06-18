@@ -5,12 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const carritoIcono = document.getElementById("icono-carrito");
     const menuCarrito = document.getElementById("menu-carrito");
     const contadorCarrito = document.getElementById("contador-carrito");
+    const icono = document.getElementById("icono-carrito");
+    const menu = document.getElementById("menu-carrito");
 
-    if (carritoIcono && menuCarrito) {
-        carritoIcono.addEventListener("click", () => {
-            menuCarrito.classList.toggle("oculto");
-        });
+    if (icono && menu) {
+      icono.addEventListener("click", () => {
+        menu.classList.toggle("activo");
+      });
     }
+
 
     if (formulario) {
         formulario.addEventListener("submit", function (e) {
