@@ -8,12 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const icono = document.getElementById("icono-carrito");
     const menu = document.getElementById("menu-carrito");
 
-    if (icono && menu) {
-      icono.addEventListener("click", () => {
-        menu.classList.toggle("activo");
-      });
-    }
-
+    if (carritoIcono && menuCarrito) {
+    carritoIcono.addEventListener("click", () => {
+        menuCarrito.classList.toggle("activo");
+    });
+}
 
     if (formulario) {
         formulario.addEventListener("submit", function (e) {
