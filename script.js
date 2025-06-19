@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (carritoIcono && menuCarrito) {
         carritoIcono.addEventListener("click", () => {
         menuCarrito.classList.toggle("activo");
+        menuCarrito.classList.remove("oculto");
     });
 }
 
