@@ -341,18 +341,22 @@ footer {
 }
 
 #menu-carrito {
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 260px;
-    max-height: 400px;
-    position: absolute;
-    top: 45px;
+    position: fixed;
+    top: 0;
     right: 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    display: none;
+    height: 100%;
+    width: 320px;
+    background-color: white;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+    padding: 20px;
     overflow-y: auto;
-    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+    z-index: 1001;
+}
+
+#menu-carrito.activo {
+    transform: translateX(0%);
 }
 
 #menu-carrito h4 {
@@ -419,5 +423,43 @@ html {
 
 #listaServicios button:hover {
     color: darkred;
+}
+
+/* === FORMULARIO COMO MODAL EMERGENTE === */
+#formularioPop {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+#formularioPop.activo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#formularioPop .contenido {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+#formularioPop .cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
 }
 
