@@ -9,22 +9,26 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <!-- Carrito flotante con redirección -->
+     <!-- Carrito flotante estilo modal -->
     <div id="carrito-container">
-            <i class="fas fa-shopping-cart" id="icono-carrito">
-               <span id="contador-carrito">0</span> 
-            </i>
-            <div id="menu-carrito" class="carrito-lateral oculto">
-                <h4>Selecciona Servicios:</h4>
-                <button class="btn" onclick="agregarServicio('Diseño Web', 800000)">Diseño Web</button>
-                <button class="btn" onclick="agregarServicio('Instalación de Sistemas', 550000)">Instalación de Sistemas</button>
-                <button class="btn" onclick="agregarServicio('Migración a la Nube', 40000000)">Migración a la Nube</button>
-                <button class="btn" onclick="agregarServicio('Asesoría Técnica', 650000)">Asesoría Técnica</button>
-                <h4>Servicios Seleccionados:</h4>
-                <ul id="listaServicios"></ul>
-                <p><strong>Total:</strong> $<span id="totalServicios">0</span> CLP</p>
+        <i class="fas fa-shopping-cart" id="icono-carrito">
+            <span id="contador-carrito">0</span>
+        </i>
+    </div>
+
+    <div id="menu-carrito" class="Pop oculto">
+        <div class="Pop-contenido">
+            <span class="cerrar-carrito">&times;</span>
+            <h2>Servicios</h2>
+            <button class="btn" onclick="agregarServicio('Diseño Web', 800000)">Diseño Web</button>
+            <button class="btn" onclick="agregarServicio('Instalación de Sistemas', 550000)">Instalación de Sistemas</button>
+            <button class="btn" onclick="agregarServicio('Migración a la Nube', 40000000)">Migración a la Nube</button>
+            <button class="btn" onclick="agregarServicio('Asesoría Técnica', 650000)">Asesoría Técnica</button>
+            <h4>Servicios Seleccionados:</h4>
+            <ul id="listaServicios"></ul>
+            <p><strong>Total:</strong> $<span id="totalServicios">0</span> CLP</p>
         </div>
-    </div> 
+    </div>
     
     <!-- Encabezado -->
     <header>
@@ -45,7 +49,7 @@
                 <li><a href="#experiencia">Experiencia</a></li>
                 <li><a href="#portafolio">Portafolio</a></li>
                 <li><a href="#carrito">Servicios</a></li>
-                <li><a href="#formularioContacto">Formulario</a></li>
+                <li><button id="abrirFormulario">Formulario</button></li>
             </ul>
         </div>
     </nav>
@@ -157,7 +161,15 @@
             </div>
         </section>
 
-         <!-- Sección de Carrito de Compras -->
+        <!-- Sección de Carrito de Compras -->
+        <section id="carrito" class="section-alt">
+            <div class="container">
+                <h2>Contrata un Servicio</h2>
+                <p>Selecciona uno o varios servicios y revisa el total haciendo clic en el carrito superior derecho.</p>
+            </div>
+        </section>
+        
+        <!-- Sección de Carrito de Compras 
         <section id="carrito" class="section-alt">
             <div class="container">
                 <h2>Contrata un Servicio</h2>
@@ -168,13 +180,14 @@
                 <p>Migración a la Nube</p>
                 <p>Asesoría Técnica</p>
             </div>
-        </section>
+        </section> -->
 
-        <!-- Formulario de contacto simulado -->
-        <section id="formularioContacto" class="section-alt">
-            <div class="container">
-                <h2>Formulario de Contacto</h2>
+        <!-- Formulario tipo modal -->
+        <div id="formularioPop" class="Pop oculto">
+            <div class="Pop-contenido">
+                <span class="cerrar">&times;</span>
                 <form id="formularioContacto">
+                    <h2>Formulario de Contacto</h2>
                     <label for="nombre">Nombre completo:</label>
                     <input type="text" id="nombre" name="nombre" required>
 
@@ -195,7 +208,7 @@
                 </form>
                 <p id="estadoEnvio"></p>
             </div>
-        </section>
+        </div>
 
     </main>
     
