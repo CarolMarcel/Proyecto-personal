@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const abrirFormulario = document.getElementById("abrirFormulario");
     const modalFormulario = document.getElementById("formularioPop");
     const cerrarFormulario = document.querySelector(".cerrar");
-    const formulario = document.getElementById("formularioModal");
+    const formulario = document.getElementById("formularioContacto");
     const estado = document.getElementById("estadoEnvio");
 
     // --- TOGGLE CARRITO LATERAL ---
