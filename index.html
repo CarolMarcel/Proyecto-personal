@@ -179,31 +179,33 @@
         </section> -->
 
         <!-- Formulario de contacto -->
-        <section id="formularioContacto" class="section-alt">
-            <div class="container">
-                <h2>Formulario de Contacto</h2>
-                <form id="formularioContacto">
-                    <label for="nombre">Nombre completo:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+        <div id="formularioPop">
+          <div class="contenido">
+            <span class="cerrar">&times;</span>
+            <form id="formularioContacto">
+              <h2>Formulario de Contacto</h2>
 
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" required>
+              <label for="nombre">Nombre completo:</label>
+              <input type="text" id="nombre" name="nombre" required>
 
-                    <label for="edad">Edad:</label>
-                    <input type="number" id="edad" name="edad" required min="18" max="99">
+              <label for="email">Correo electrónico:</label>
+              <input type="email" id="email" name="email" required>
 
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" required minlength="10"></textarea>
+              <label for="edad">Edad:</label>
+              <input type="number" id="edad" name="edad" required min="18" max="99">
 
-                    <label>
-                        <input type="checkbox" id="terminos" required> Acepto los términos y condiciones
-                    </label>
+              <label for="mensaje">Mensaje:</label>
+              <textarea id="mensaje" name="mensaje" required minlength="10"></textarea>
 
-                    <button type="submit" class="btn">Enviar</button>
-                </form>
-                <p id="estadoEnvio"></p>
-            </div>
-        </section>
+              <label>
+                <input type="checkbox" id="terminos" required> Acepto los términos y condiciones
+              </label>
+
+              <button type="submit" class="btn">Enviar</button>
+              <p id="estadoEnvio"></p>
+            </form>
+          </div>
+        </div>
 
     </main>
     
