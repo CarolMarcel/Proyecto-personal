@@ -287,6 +287,7 @@ footer {
     }
 }
 
+/* Carrito */ 
 #carrito-container {
     position: fixed;
     top: 20px;
@@ -445,14 +446,15 @@ html {
 
 #formularioPop .contenido {
     background-color: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
-    max-width: 500px;
+    max-width: 600px;
     width: 90%;
     position: relative;
     box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
+/* Botón cerrar (X) */
 #formularioPop .cerrar {
     position: absolute;
     top: 10px;
@@ -463,3 +465,102 @@ html {
     font-weight: bold;
 }
 
+/* Estilo del título dentro del modal */
+#formularioPop .contenido h2 {
+    grid-column: span 2;
+    color: #2c3e50;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+/* Estructura del formulario en grid */
+#formularioPop .contenido form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    align-items: center;
+}
+
+/* Etiquetas */
+#formularioPop .contenido form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Inputs y textarea */
+#formularioPop .contenido form input[type="text"],
+#formularioPop .contenido form input[type="email"],
+#formularioPop .contenido form input[type="number"],
+#formularioPop .contenido form textarea {
+    width: 100%;
+    padding: 6px;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Textarea ocupa el ancho completo */
+#formularioPop .contenido form textarea {
+    grid-column: span 2;
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Checkbox en fila completa */
+#formularioPop .contenido form label[for="terminos"] {
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+/* Botón Enviar */
+#formularioPop .contenido form .btn {
+    grid-column: span 2;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    text-align: center;
+    justify-self: center;
+}
+
+#formularioPop .contenido form .btn:hover {
+    background-color: #2980b9;
+}
+
+/* Mensaje de estado */
+#estadoEnvio {
+    grid-column: span 2;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* === FORMULARIO RESPONSIVE === */
+@media (max-width: 600px) {
+    #formularioPop .contenido form {
+        grid-template-columns: 1fr;
+    }
+
+    #formularioPop .contenido h2 {
+        grid-column: span 1;
+        text-align: center;
+    }
+
+    #formularioPop .contenido form textarea,
+    #formularioPop .contenido form label[for="terminos"],
+    #formularioPop .contenido form .btn,
+    #estadoEnvio {
+        grid-column: span 1;
+    }
+}
