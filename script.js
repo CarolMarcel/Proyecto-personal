@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cerrarFormulario = document.querySelector(".cerrar");
     const formulario = document.getElementById("formularioContacto");
     const estado = document.getElementById("estadoEnvio");
+    const cerrarCarrito = document.getElementById("cerrarCarrito");
 
     // --- TOGGLE CARRITO LATERAL ---
     iconoCarrito.addEventListener("click", () => {
@@ -28,6 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.target === modalFormulario) {
             modalFormulario.classList.remove("activo");
         }
+    });
+
+    // --- CERRAR CARRITO CON LA X ---
+    cerrarCarrito.addEventListener("click", () => {
+        menuCarrito.classList.remove("activo");
     });
 
     // --- VALIDACIONES DEL FORMULARIO ---
