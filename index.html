@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Configuraciones básicas del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Página Personal</title>
+    <!-- CSS principal del proyecto -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CarolMarcel/Proyecto-personal/style.css">
+    <!-- Librería de iconos FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="script.js"></script>
 </head>
 <body>
      <!-- Carrito flotante estilo modal -->
     <div id="carrito-container">
+    <!-- Icono del carrito con contador -->
     <i class="fas fa-shopping-cart" id="icono-carrito">
         <span id="contador-carrito">0</span>
     </i>
+    <!-- Menú lateral del carrito -->
     <div id="menu-carrito" class="carrito-lateral">
+        <!-- Botón para cerrar el carrito -->
         <span class="cerrar-carrito" id="cerrarCarrito">&times;</span>
         <h4>Selecciona Servicios:</h4>
+        <!-- Botones para agregar servicios -->
         <button class="btn" onclick="agregarServicio('Diseño Web', 800000)">Diseño Web</button>
         <button class="btn" onclick="agregarServicio('Instalación de Sistemas', 550000)">Instalación de Sistemas</button>
         <button class="btn" onclick="agregarServicio('Migración a la Nube', 40000000)">Migración a la Nube</button>
         <button class="btn" onclick="agregarServicio('Asesoría Técnica', 650000)">Asesoría Técnica</button>
         <h4>Servicios Seleccionados:</h4>
+        <!-- Lista de servicios seleccionados -->
         <ul id="listaServicios"></ul>
         <p><strong>Total:</strong> $<span id="totalServicios">0</span> CLP</p>
     </div>
 </div>
     
-    <!-- Encabezado -->
+    <!-- Encabezado principal con foto y presentación -->
     <header>
         <div class="container">
             <img src="https://raw.githubusercontent.com/CarolMarcel/Proyecto-personal/main/Foto_perfil.jpg" alt="Mi Foto de Perfil" class="profile-image">
@@ -36,7 +44,7 @@
         </div>
     </header>
     
-    <!-- Navegación -->
+    <!-- Menú de navegación principal -->
     <nav>
         <div class="container">
             <ul>
@@ -166,12 +174,14 @@
             </div>
         </section>
         
-        <!-- Formulario de contacto -->
+        <!-- Formulario tipo modal (oculto por defecto) -->
         <div id="formularioPop">
           <div class="contenido">
+            <!-- Botón para cerrar el formulario -->
             <span class="cerrar">&times;</span>
             <h2>Formulario de Contacto</h2>
             <form id="formularioModal">
+            <!-- Campos del formulario -->
               <label for="nombre">Nombre completo:</label>
               <input type="text" id="nombre" name="nombre" required>
 
@@ -197,6 +207,7 @@
 
     </main>
 
+    <!-- Pie de página con enlaces a redes sociales -->
     <footer>
         <div class="redes-sociales">
             <a href="https://www.linkedin.com/in/carol-grace-marcel-vega" target="_blank">
@@ -209,7 +220,7 @@
                 <i class="fab fa-github"></i>
             </a>
         </div>
-        <p>&copy; 2025 Carol Marcel | Analista Programador. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Carol Marcel | Analista Programador | Desarrolladora Full Stack. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
