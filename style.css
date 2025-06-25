@@ -295,6 +295,7 @@ footer {
     z-index: 1000;
 }
 
+/* Panel lateral del carrito oculto inicialmente (fuera de la pantalla) */
 .carrito-lateral {
     position: fixed;
     top: 0;
@@ -310,10 +311,12 @@ footer {
     z-index: 1001;
 }
 
+/* Cuando el carrito está activo (visible) */
 .carrito-lateral.activo {
     transform: translateX(0%);
 }
 
+/* Botón "X" para cerrar el carrito */
 .cerrar-carrito {
     position: absolute;
     top: 10px;
@@ -324,6 +327,7 @@ footer {
     cursor: pointer;
 }
 
+/* Ícono del carrito con estilo circular y notificación */
 #icono-carrito {
     position: relative;
     font-size: 1.8rem;
@@ -334,6 +338,7 @@ footer {
     cursor: pointer;
 }
 
+/* Contador numérico sobre el ícono del carrito */
 #contador-carrito {
     position: absolute;
     top: -10px;
@@ -351,6 +356,7 @@ footer {
     border: 2px solid white;
 }
 
+/* Menú lateral del carrito con servicios */
 #menu-carrito {
     position: fixed;
     top: 0;
@@ -366,16 +372,19 @@ footer {
     z-index: 1001;
 }
 
+/* Cuando el menú del carrito está activo */
 #menu-carrito.activo {
     transform: translateX(0%);
 }
 
+/* Encabezados dentro del menú */
 #menu-carrito h4 {
     margin-bottom: 10px;
     font-size: 1rem;
     color: #2c3e50;
 }
 
+/* Botones para agregar servicios */
 #menu-carrito .btn {
     display: block;
     width: 100%;
@@ -389,28 +398,30 @@ footer {
     font-size: 0.85rem;
 }
 
+/* Estilo al pasar el mouse por los botones del carrito */
 #menu-carrito .btn:hover {
     background-color: #2980b9;
 }
 
+/* Lista de servicios seleccionados */
 #menu-carrito ul {
     list-style: none;
     padding-left: 0;
     margin: 10px 0;
 }
 
+/* Cada ítem del servicio agregado */
 #menu-carrito li {
     font-size: 0.85rem;
     margin-bottom: 5px;
 }
 
+/* Total del carrito */
 #menu-carrito p {
     font-weight: bold;
     margin-top: 10px;
     font-size: 0.9rem;
 }
-
-
 
 /* Resaltado temporal al ir al formulario */
 .resaltado {
@@ -437,6 +448,7 @@ html {
 }
 
 /* === FORMULARIO COMO MODAL EMERGENTE === */
+/* Fondo oscuro para el modal del formulario, ocupa toda la pantalla */
 #formularioPop {
     display: none; /* Oculto por defecto */
     position: fixed;
@@ -448,12 +460,14 @@ html {
     background-color: rgba(0,0,0,0.7);
 }
 
+/* Cuando el formulario está activo, se centra en pantalla */
 #formularioPop.activo {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Caja blanca que contiene el formulario */
 #formularioPop .contenido {
     background-color: white;
     padding: 30px;
@@ -529,6 +543,7 @@ html {
 }
 
 /* Botón Enviar */
+/* Botón de envío del formulario centrado y con diseño consistente */
 #formularioPop .contenido form .btn {
     grid-column: span 2;
     background-color: #3498db;
@@ -544,11 +559,12 @@ html {
     justify-self: center;
 }
 
+/* Color al pasar el mouse por el botón */
 #formularioPop .contenido form .btn:hover {
     background-color: #2980b9;
 }
 
-/* Mensaje de estado */
+/* Mensaje de estado tras enviar */
 #estadoEnvio {
     grid-column: span 2;
     margin-top: 10px;
@@ -556,7 +572,7 @@ html {
     font-weight: bold;
 }
 
-/* === FORMULARIO RESPONSIVE === */
+/* FORMULARIO RESPONSIVO para pantallas pequeñas */
 @media (max-width: 600px) {
     #formularioPop .contenido form {
         grid-template-columns: 1fr;
